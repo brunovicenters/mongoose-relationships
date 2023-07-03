@@ -30,11 +30,11 @@ const User = mongoose.model("User", userSchema);
 
 const makeUser = async () => {
   const u = new User({
-    first: "Lorena",
+    first: "Harry",
     last: "Potter",
   });
   u.addresses.push({
-    street: "123 Sesame St.",
+    street: "99 3rd Avenue",
     city: "New York",
     state: "NY",
     country: "USA",
@@ -43,16 +43,18 @@ const makeUser = async () => {
   console.log(res);
 };
 
-const addAddresses = async (id) => {
-  const user = await User.findById(id);
-  user.addresses.push({
-    street: "99 3rd St.",
-    city: "New York",
-    state: "NY",
-    country: "USA",
-  });
-  const res = await user.save();
-  console.log(res);
-};
+// const addAddresses = async (id) => {
+//   const user = await User.findById(id);
+//   user.addresses.push({
+//     street: "99 3rd St.",
+//     city: "New York",
+//     state: "NY",
+//     country: "USA",
+//   });
+//   const res = await user.save();
+//   console.log(res);
+// };
 
-addAddresses("64a2d029ea5af221acfa3c81");
+// addAddresses("64a2d029ea5af221acfa3c81");
+
+// makeUser();
